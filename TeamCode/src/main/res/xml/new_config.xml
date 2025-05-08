@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<Robot type="FirstInspires-FTC">
+    <LynxUsbDevice name="Expansion Hub Portal 1" serialNumber="DQ8P2D5H" parentModuleAddress="2">
+        <LynxModule name="Expansion Hub 2" port="2">
+            <goBILDA5202SeriesMotor name="frontLeft" port="0" />
+            <goBILDA5202SeriesMotor name="rearLeft" port="1" />
+
+            <goBILDA5202SeriesMotor name="outtakeElevatorLeft" port="3" />
+        </LynxModule>
+
+        <ServoHub name="Servo Hub 5" port="5">
+            <Servo name="intakeExtensionLeft" port="0" />
+            <Servo name="intakeArm" port="2" />
+            <Servo name="intakeTurn" port="4" />
+            <Servo name="intakeClaw" port="5" />
+        </ServoHub>
+
+    </LynxUsbDevice>
+
+    <LynxUsbDevice name="Control Hub Portal" serialNumber="(embedded)" parentModuleAddress="173">
+
+        <ServoHub name="Servo Hub 4" port="4">
+            <Servo name="intakeExtensionRight" port="1" />
+            <Servo name="outtakeClaw" port="2" />
+            <Servo name="outtakeArm" port="0" />
+            <Servo name="intakeSpin" port="5" />
+        </ServoHub>
+
+        <LynxModule name="Control Hub" port="173">
+            <ControlHubImuBHI260AP name="imu" port="0" bus="0" />
+            <NeveRest60Gearmotor name="frontRight" port="0" />
+            <NeveRest60Gearmotor name="rearRight" port="1" />
+
+            <goBILDA5202SeriesMotor name="outtakeElevatorRight" port="2" />
+        </LynxModule>
+    </LynxUsbDevice>
+</Robot>
